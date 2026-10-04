@@ -2,7 +2,9 @@ import { useEffect, useRef } from 'react';
 import { Compass, FileText, Home, Lock, Menu, X } from 'lucide-react';
 import { useRouter } from '@/router';
 import { useDecisions, useStore } from '@/store';
-import { brand, comingSoon, corridors } from '@/data/mockData';
+import { comingSoon, corridors } from '@/data/mockData';
+
+const author = { name: 'Shivam Sharma', initials: 'SS', title: 'AI Product Manager' };
 import { Chip } from '@/components/ui';
 import { DemoControls } from '@/components/DemoControls';
 
@@ -95,11 +97,11 @@ function Sidebar({ onNavigate }: { onNavigate: () => void }) {
       <div className="py-3 px-3 border-t border-ink-200">
         <div className="flex items-center gap-2.5 px-3 py-2">
           <div className="w-7 h-7 rounded-full bg-ink-800 flex items-center justify-center text-white text-xs font-semibold">
-            {brand.initials}
+            {author.initials}
           </div>
           <div className="min-w-0">
-            <p className="text-sm font-medium text-ink-900 truncate">{brand.founder}</p>
-            <p className="text-xs text-ink-500 truncate">{brand.name}</p>
+            <p className="text-sm font-medium text-ink-900 truncate">{author.name}</p>
+            <p className="text-xs text-ink-500 truncate">{author.title}</p>
           </div>
         </div>
       </div>
